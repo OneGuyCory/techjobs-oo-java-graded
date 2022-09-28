@@ -96,6 +96,27 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+
+    public String valueChecker (String value) {
+        if (value != "") {
+            return value;
+        }
+        else {
+            return "Data not available";
+        }
+    }
+
+    @Override
+    public String toString() {
+
+        return "\nID: " + valueChecker(String.valueOf(this.getId())) + "\n" +
+                "Name: " + valueChecker(String.valueOf(this.getName())) + "\n" +
+                "Employer: " + valueChecker(String.valueOf(this.getEmployer())) + "\n" +
+                "Location: " + valueChecker(String.valueOf(this.getLocation())) + "\n" +
+                "Position Type: " + valueChecker(String.valueOf(this.getPositionType())) + "\n" +
+                "Core Competency: " + valueChecker(String.valueOf(this.getCoreCompetency())) + "\n";
+    }
 }
 
 
